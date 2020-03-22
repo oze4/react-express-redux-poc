@@ -9,7 +9,6 @@
     "server": "node server.js",
     "install:deps": "npm install && cd frontend && npm install"
   },
-  "proxy": "http://localhost:8000",
   "keywords": [],
   "author": "",
   "license": "ISC",
