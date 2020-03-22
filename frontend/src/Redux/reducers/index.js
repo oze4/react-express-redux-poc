@@ -6,12 +6,9 @@ const defaultState = {
 
 export default function appReducer(state = defaultState, action) {
   switch (action.type) {
-    case types.IS_ACCOUNT_VERIFIED: {
-      return state.isAccountVerified;
-    }
-
     case types.SET_ACCOUNT_STATUS: {
       return {
+        ...state,
         isAccountVerified: action.payload
       };
     }
