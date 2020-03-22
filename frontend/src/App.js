@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import Routes from "./Routes";
 import withRedux from "./Redux/containers";
+import Logout from './Logout';
 
 class App extends Component {
   state = {
@@ -22,10 +23,6 @@ class App extends Component {
       pw: event.target.value
     });
   };
-
-  handleLogout = () => {
-      this.props.setAccountStatus(false);
-  }
 
   handleLogin = () => {
     let url = `${document.location}authorize`;
@@ -57,7 +54,7 @@ class App extends Component {
         <Link to="/protected">Protected</Link>
         <div style={{ margin: '40px' }}>
           {isAccountVerified ? (
-            <button onClick={this.handleLogout}>Logout</button>
+            <Logout />
           ) : (
             <React.Fragment>
               <p>
