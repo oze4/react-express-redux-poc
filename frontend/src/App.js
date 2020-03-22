@@ -9,10 +9,6 @@ class App extends Component {
     pw: ""
   };
 
-  componentDidMount() {
-    console.log(this.props);
-  }
-
   handleUnInput = event => {
     this.setState({
       ...this.state,
