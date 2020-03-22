@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import withRedux from "./Redux/containers";
+import withRedux from "../Redux/containers";
 
 class Home extends Component {
   render() {

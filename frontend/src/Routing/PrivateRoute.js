@@ -1,5 +1,5 @@
 import React from "react";
-import withRedux from "./Redux/containers";
+import withRedux from "../Redux/containers";
 
 import { Route, Redirect } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import React from "react";
 
-import Home from "./Home";
-import Protected from "./Protected";
+import Home from "../Pages/Home";
+import Protected from "../Pages/Protected";
 import PrivateRoute from "./PrivateRoute";
 
 import { Route, Switch } from "react-router-dom";
