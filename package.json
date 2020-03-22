@@ -7,8 +7,8 @@
     "client": "cd frontend && npm start",
     "dev": "cross-env NODE_ENV=development && concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
-    "install:deps": "npm install && cd frontend && npm install",
-    "start": "cross-env NODE_ENV=production && cd frontend && npm run build && cd .. && npm run server"
+    "install:deps": "cd frontend && npm install && cd .. && npm install",
+    "start": "cross-env NODE_ENV=production && npm run install:deps && cd frontend && npm run build && cd .. && npm run server"
   },
   "keywords": [],
   "author": "",
