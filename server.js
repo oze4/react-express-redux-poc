@@ -3,7 +3,7 @@ const path = require('path');
 const cors = require("cors");
 
 const app = express();
-const port = 8002;
+const port = process.env.PORT || 8002;
 
 const staticFilesPath = path.resolve(__dirname, './frontend/build');
 const staticFiles = express.static(staticFilesPath);
