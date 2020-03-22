@@ -30,7 +30,7 @@ class App extends Component {
   handleLogin = () => {
     let url = `${document.location}authorize`;
     if (process.env.NODE_ENV === 'development') {
-        url = 'http://localhost:8002'
+        url = 'http://localhost:8002/authorize'
     }
     fetch(url, {
       method: "POST",
