@@ -28,7 +28,11 @@ class App extends Component {
   }
 
   handleLogin = () => {
-    fetch("http://localhost:8002/authorize", {
+    let url = `${document.location}authorize`;
+    if (process.env.NODE_ENV === 'development') {
+        url = 'http://localhost:8002'
+    }
+    fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ un: this.state.un, pw: this.state.pw })
