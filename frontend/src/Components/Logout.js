@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import withRedux from '../Redux/containers';
+import { withRedux } from '../Redux';
 
 class Logout extends Component {
     handleLogout = () => {

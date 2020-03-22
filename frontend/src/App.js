@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import Routes from "./Routing/Routes";
-import withRedux from "./Redux/containers";
+import { withRedux } from "./Redux";
 import Logout from './Components/Logout';
 
 class App extends Component {
