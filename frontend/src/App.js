@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import Routes from "./Routing/Routes";
 import { withRedux } from "./Redux";
-import Logout from './Components/Logout';
+import Logout from "./Components/Logout";
 
 class App extends Component {
   state = {
@@ -10,24 +10,17 @@ class App extends Component {
     pw: ""
   };
 
-  handleUnInput = event => {
+  handleInput = event => {
     this.setState({
       ...this.state,
-      un: event.target.value
-    });
-  };
-
-  handlePwInput = event => {
-    this.setState({
-      ...this.state,
-      pw: event.target.value
+      [event.target.getAttribute('d-t')]: event.target.value
     });
   };
 
   handleLogin = () => {
     let url = `${document.location}authorize`;
-    if (process.env.NODE_ENV === 'development') {
-        url = 'http://localhost:8002/authorize'
+    if (process.env.NODE_ENV === "development") {
+      url = "http://localhost:8002/authorize";
     }
     fetch(url, {
       method: "POST",
@@ -52,7 +45,7 @@ class App extends Component {
         <Link to="/">Home</Link>
         <br />
         <Link to="/protected">Protected</Link>
-        <div style={{ margin: '40px' }}>
+        <div style={{ margin: "40px" }}>
           {isAccountVerified ? (
             <Logout />
           ) : (
@@ -62,10 +55,10 @@ class App extends Component {
                 in it won't work.
               </p>
               Username:
-              <input type="text" onInput={this.handleUnInput} />
+              <input type="text" d-t="un" onInput={this.handleInput} />
               <br />
               Password:
-              <input type="password" onInput={this.handlePwInput} />
+              <input type="password" d-t="pw" onInput={this.handleInput} />
               <br />
               <small>Username is 'a' password is 'a'</small>
               <br />
