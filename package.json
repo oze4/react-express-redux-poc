@@ -17,6 +17,6 @@
     "concurrently": "^5.1.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
